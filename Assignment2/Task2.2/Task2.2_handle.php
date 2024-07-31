@@ -13,7 +13,9 @@ if (isset($_POST['order'])){
         $errors[] = "The price should be a number";
     }elseif($price < 0){
         $errors[] = "The price should be a positive number";
-    }elseif (! is_numeric($piece)) {
+    }
+    
+    if (! is_numeric($piece)) {
         $errors[] = "The piece should be a number";
     }elseif($piece < 0){
         $errors[] = "The piece should be a positive number";
