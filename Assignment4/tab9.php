@@ -26,7 +26,7 @@
     $country = mysqli_real_escape_string($conn, $country);
 
     $sql = "SELECT * FROM customers 
-            WHERE country = $country
+            WHERE country = '$country'
             GROUP BY creditLimit DESC 
             LIMIT 3";
     $result = mysqli_query($conn, $sql);
